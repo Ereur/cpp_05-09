@@ -70,11 +70,9 @@ void Form::beSigned(Bureaucrat& object)
 
 void Form::execute(Bureaucrat const & executor) const
 {
-    if (this->Signed)
-    {
-        if (executor.getGrade() <= this->gradeToExec)
-            this->task();
-        else
-            throw GradeTooLowException();
-    }
+    if (!this->Signed)
+        throw FormIsNotSigned();
+    if (executor.getGrade() > this->gradeToExec)
+        throw GradeTooLowException();
+    this->task();
 }

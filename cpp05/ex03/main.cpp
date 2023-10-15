@@ -2,17 +2,23 @@
 #include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "Intern.hpp"
 
 int main()
 {
 
     try {
-        RobotomyRequestForm test("Rassam");
-        Bureaucrat lAariss("Anas", 45);
+        Intern Robotomy;
+        Form* Robo;
+        Robo = Robotomy.makeForm("robotomy request", "Bender");
+    
+        Intern someRandomIntern;
+        Form* rrf;
+        rrf = someRandomIntern.makeForm("presidential pardon", "Waa3");
 
-        lAariss.signForm(test);
-        lAariss.executeForm(test);
-        // std::cout << test << std::endl;
+        Intern Shrubbery;
+        Form* shru;
+        shru = Shrubbery.makeForm("shrubbery creation", "biip");
     }
     catch (std::exception& e)
     {

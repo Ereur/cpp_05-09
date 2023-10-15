@@ -6,7 +6,7 @@ int main()
 
     try {
         Form test("3a9edzwaj", 10, 15);
-        Bureaucrat lAariss("Anas", 151);
+        Bureaucrat lAariss("Anas", 10);
 
         lAariss.signForm(test);
     

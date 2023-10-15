@@ -5,6 +5,7 @@ Bureaucrat::Bureaucrat()
 {
     std::cout << "Bureaucrat Default constructor" << std::endl;
 }
+
 Bureaucrat::Bureaucrat(const std::string& name, int grade)
     :name(name)
 {

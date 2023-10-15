@@ -8,7 +8,7 @@ int main()
 
     try {
         RobotomyRequestForm test("Rassam");
-        Bureaucrat lAariss("Anas", 45);
+        Bureaucrat lAariss("Anas", 5);
 
         lAariss.signForm(test);
         lAariss.executeForm(test);

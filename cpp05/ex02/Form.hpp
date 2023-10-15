@@ -23,18 +23,25 @@ class Form {
 
          class GradeTooHighException : public std::exception
         {
-            virtual const char* what() const throw(){
+            const char* what() const throw(){
                 return ("Grade Too High");
             }
         };
 
         class GradeTooLowException : public std::exception
         {
-            virtual const char* what() const throw(){
+           const char* what() const throw(){
                 return ("Grade Too Low");
             }
         };
         
+        class FormIsNotSigned : public std::exception
+        {
+           const char* what() const throw(){
+                return ("Form is not signed");
+            }
+        };
+
         const std::string& getName() const;
         const bool& getSigned() const;
         const int& getGradeToSign() const;

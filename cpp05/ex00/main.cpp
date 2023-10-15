@@ -4,13 +4,14 @@ int main()
 {
 
     try {
-        Bureaucrat test("Anas", 10);
-        Bureaucrat allo;
-        // std::cout << test << std::endl ;
-        // test.decrement();
-        // std::cout << test.getGrade() << std::endl;
-        allo = test;
-        std::cout << allo;
+        // Bureaucrat low("Anas", 150);
+        // low.decrement();
+        // std::cout << low << std::endl;
+
+        Bureaucrat high("Anas", 1);
+        high.increment();
+        std::cout << high;
+
     }
     catch (std::exception& e)
     {
@@ -18,6 +19,6 @@ int main()
     }
     catch(...)
     {
-        std::cout << "unkown exception" << std::endl;
+        std::cout << "Default exception" << std::endl;
     }
 }
