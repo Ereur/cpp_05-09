@@ -2,13 +2,13 @@
 
 
 RobotomyRequestForm::RobotomyRequestForm()
-    :Form("RobotomyRequestForm", 72, 45)
+    :AForm("RobotomyRequestForm", 72, 45)
 {
     std::cout << "RobotomyRequestForm Default constructor" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string& target)
-    :Form("RobotomyRequestForm", 72, 45), target(target)
+    :AForm("RobotomyRequestForm", 72, 45), target(target)
 {
     std::cout << "RobotomyRequestForm Parametrized constructor" << std::endl;
 }

@@ -23,33 +23,33 @@ Intern::~Intern()
 
 }
 
-Form* Intern::makeRobotomyForm(const std::string& target)
+AForm* Intern::makeRobotomyForm(const std::string& target)
 {
     return (new RobotomyRequestForm(target));
 }
 
-Form* Intern::makeShrubberyCreationForm(const std::string& target)
+AForm* Intern::makeShrubberyCreationForm(const std::string& target)
 {
     return (new ShrubberyCreationForm(target));
 }
 
-Form* Intern::makePresidentialPardonForm(const std::string& target)
+AForm* Intern::makePresidentialPardonForm(const std::string& target)
 {
     return (new PresidentialPardonForm(target));
 }
 
-typedef Form*(Intern::*Function)(const std::string& target);
+typedef AForm*(Intern::*Function)(const std::string& target);
 
 // Form* test = ((*this).*(form))(target);
 
-Form* Intern::makeForm(const std::string& name, const std::string& target)
+AForm* Intern::makeForm(const std::string& name, const std::string& target)
 {
     std::string formNames[3] = {"robotomy request","presidential pardon","shrubbery creation"};    
     Function forms[3] = {&Intern::makeRobotomyForm, &Intern::makePresidentialPardonForm, &Intern::makeShrubberyCreationForm};
 
     int i = 0;
 
-    Form *type;
+    AForm *type;
 
     while (i < 3)
     {

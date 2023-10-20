@@ -2,9 +2,9 @@
 #define _PRESIDENTIALPARDONFORM_HPP
 
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class PresidentialPardonForm : public Form 
+class PresidentialPardonForm : public AForm 
 {
     private:
         const std::string target;
@@ -15,7 +15,7 @@ class PresidentialPardonForm : public Form
         PresidentialPardonForm& operator=(PresidentialPardonForm&);
         ~PresidentialPardonForm();
 
-        void task() const;  
+        void task() const;
 };
 
 #endif

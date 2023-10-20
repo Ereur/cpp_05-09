@@ -4,9 +4,9 @@
 #include <iostream>
 #include <exception>
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Intern {
 
@@ -16,10 +16,10 @@ class Intern {
         Intern& operator=(Intern& object);
         ~Intern();
 
-        Form* makeForm(const std::string& name, const std::string& target);
-        Form* makeRobotomyForm(const std::string& target);
-        Form* makeShrubberyCreationForm(const std::string& target);
-        Form* makePresidentialPardonForm(const std::string& target);
+        AForm* makeForm(const std::string& name, const std::string& target);
+        AForm* makeRobotomyForm(const std::string& target);
+        AForm* makeShrubberyCreationForm(const std::string& target);
+        AForm* makePresidentialPardonForm(const std::string& target);
 
         class formDosentExist : public std::exception {
             const char* what() const throw() {

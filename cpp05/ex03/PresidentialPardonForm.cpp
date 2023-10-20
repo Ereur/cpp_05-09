@@ -2,13 +2,13 @@
 
 
 PresidentialPardonForm::PresidentialPardonForm()
-    :Form("PresidentialPardonForm", 25, 5)
+    :AForm("PresidentialPardonForm", 25, 5)
 {
     std::cout << "PresidentialPardonForm Default constructor" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string& target)
-    :Form("PresidentialPardonForm", 25, 5), target(target)
+    :AForm("PresidentialPardonForm", 25, 5), target(target)
 {
     std::cout << "PresidentialPardonForm Parametrized constructor" << std::endl;
 }

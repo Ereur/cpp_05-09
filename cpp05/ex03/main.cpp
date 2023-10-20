@@ -9,15 +9,15 @@ int main()
 
     try {
         Intern Robotomy;
-        Form* Robo;
+        AForm* Robo;
         Robo = Robotomy.makeForm("robotomy request", "Bender");
     
         Intern someRandomIntern;
-        Form* rrf;
+        AForm* rrf;
         rrf = someRandomIntern.makeForm("presidential pardon", "Waa3");
 
         Intern Shrubbery;
-        Form* shru;
+        AForm* shru;
         shru = Shrubbery.makeForm("shrubbery creation", "biip");
     }
     catch (std::exception& e)

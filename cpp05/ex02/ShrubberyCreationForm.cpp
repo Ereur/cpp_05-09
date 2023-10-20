@@ -2,13 +2,13 @@
 
 
 ShrubberyCreationForm::ShrubberyCreationForm()
-    :Form("ShrubberyCreationForm", 145, 137)
+    :AForm("ShrubberyCreationForm", 145, 137)
 {
     std::cout << "ShrubberyCreationForm Default constructor" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string& target)
-    :Form("ShrubberyCreationForm", 145, 137), target(target)
+    :AForm("ShrubberyCreationForm", 145, 137), target(target)
 {
     std::cout << "ShrubberyCreationForm Parametrized constructor" << std::endl;
 }
