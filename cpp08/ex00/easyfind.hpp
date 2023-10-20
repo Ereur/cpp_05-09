@@ -5,12 +5,12 @@
 #include <iostream>
 
 template <class T>
-int& easyfind(T& ContainerInteger, const int& sec)
+typename T::iterator easyfind(T& ContainerInteger, const int& sec)
 {
     typedef typename T::iterator iter;
 
     iter it = std::find(ContainerInteger.begin(), ContainerInteger.end(), sec);
-    return (*it);
+    return (it);
 }
 
 #endif
