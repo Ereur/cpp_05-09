@@ -3,8 +3,8 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS =  main.cpp 
-HEAD =  Whatever.hpp
-NAME = func
+HEAD =  easyfind.hpp
+NAME = find
 
 all: $(NAME)
 
