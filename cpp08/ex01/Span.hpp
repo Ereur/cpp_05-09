@@ -16,7 +16,7 @@ class Span
     public:
         Span();
         Span(unsigned int n);
-        // Span(Span& object);
+        Span(Span& object);
         Span& operator=(Span&);
         ~Span();
 
@@ -40,8 +40,8 @@ class Span
 
         std::vector<int>& getStore() ;
 
-        int shortestSpan();
-        int longestSpan();
+        long long shortestSpan() const;
+        long long longestSpan() const;
 };
 
 #endif

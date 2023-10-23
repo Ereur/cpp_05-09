@@ -12,11 +12,11 @@ Span::Span(unsigned int n)
 
 }
 
-// Span::Span(Span& object)
-// {
+Span::Span(Span& object)
+{
     
-//     *this = object;
-// }
+    *this = object;
+}
 
 Span& Span::operator=(Span& object)
 {
@@ -42,10 +42,10 @@ void Span::addNumber(int number)
     _store.push_back(number);
 }
 
-int Span::shortestSpan()
+long long Span::shortestSpan() const
 {
     std::vector<int> _tmp_store;
-    int shortspan = INT_MAX;
+    long long shortspan = std::numeric_limits<long>::max();
 
     _tmp_store = _store;
 
@@ -53,14 +53,14 @@ int Span::shortestSpan()
 
     for (std::vector<int>::iterator it = _tmp_store.begin(); (it + 1) != _tmp_store.end(); it++)
     {
-        int res = *(it + 1) - *it;
+        long long res = static_cast<long long> (*(it + 1)) - static_cast<long long>(*it);
         if ( res < shortspan)
             shortspan = res;
     }
     return shortspan;
 }
 
-int Span::longestSpan()
+long long Span::longestSpan() const
 {
-    return (*std::max_element(_store.begin(), _store.end()) - *std::min_element(_store.begin(), _store.end()));
+    return (static_cast<long long>(*std::max_element(_store.begin(), _store.end())) - static_cast<long long>(*std::min_element(_store.begin(), _store.end())));
 }
