@@ -17,26 +17,26 @@ class MutantStack: public std::stack<T, Container>
 		MutantStack& operator=(const MutantStack& copy) { this->c = copy.c; return (*this); }
 		~MutantStack() {}
 
-		typedef typename std::stack<T>::container_type::iterator				iterator;
-		typedef typename std::stack<T>::container_type::const_iterator			const_iterator;
+		typedef typename std::stack<T,Container>::container_type::iterator				iterator;
+		typedef typename std::stack<T,Container>::container_type::const_iterator			const_iterator;
 
 		iterator begin() {
             
-            return (std::stack<T>::c.begin()); 
+            return (std::stack<T, Container>::c.begin()); 
         
         }
 
 		iterator end() { 
-            return (std::stack<T>::c.end()); 
+            return (std::stack<T, Container>::c.end()); 
         }
 		
 		const_iterator cbegin() 
         {
-            return (std::stack<T>::c.cbegin()); 
+            return (std::stack<T,Container>::c.cbegin()); 
         }
 		
         const_iterator cend() { 
-            return (std::stack<T>::c.cend()); 
+            return (std::stack<T,Container>::c.cend()); 
         }
 };
 
