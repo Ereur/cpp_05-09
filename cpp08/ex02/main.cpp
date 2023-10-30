@@ -33,7 +33,9 @@ int main()
 
     {
         std::cout << "--------------test with list underlaying container" << std::endl;
-	    MutantStack<int, std::list<int> > ms;
+	    
+        std::vector<int, std::list<int> > ms1;
+        MutantStack<int, std::list<int> > ms;
 
 	    ms.push(5);
         ms.push(10);
