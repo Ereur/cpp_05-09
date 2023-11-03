@@ -6,6 +6,8 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+#include <cstdlib>
+#include <cstring>
 
 class BitcoinExchange
 {
@@ -21,7 +23,6 @@ class BitcoinExchange
         void setDataCsv();
         bool isValidDate(const std::string& Date);
         std::map<std::string, float>& getDataCsv();
-        std::ifstream& openFile(const std::string& name);
         void printExangeRate(std::string name);
 };
 

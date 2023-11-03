@@ -38,7 +38,7 @@ void BitcoinExchange::setDataCsv()
     {
         // std::cout << "line :  " << line << std::endl;
         size_t end = line.find(",");
-        _DataCsv[line.substr(0, end)] = std::stof(line.substr(end+1));
+        _DataCsv[line.substr(0, end)] = std::atof(line.substr(end+1).c_str());
     }
     input.close();
 }
@@ -114,7 +114,7 @@ void BitcoinExchange::printExangeRate(std::string name)
 {
     std::string line;
     std::ifstream   input;
-    input.open(name);
+    input.open(name.c_str());
     getline(input, line);
     // std::cout<< "line:" << line;
     if (std::strcmp(line.c_str(), "date | value"))
@@ -134,7 +134,7 @@ void BitcoinExchange::printExangeRate(std::string name)
                 throw "Error: value is not valide";
             
             std::map<std::string, float>::iterator it = _DataCsv.find(date);
-            float val = std::stof(value);
+            float val = std::atof(value.c_str());
             if (val < 0 || val > 1000)
                 throw "Error: value is not valide";
 
